@@ -1,0 +1,7 @@
+<div class="login">
+    <form [formGroup]="loginForm">
+        <input type="email" autocomplete="true" placeholder="Enter a email" formControlName="email" class="form-control">
+        <input type="password" placeholder="Enter a password" formControlName="password" class="form-control">
+        <button class="btn btn-primary w-100" [disabled]="loginForm.invalid" (click)="onLogin()">Login</button>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+<div class="container mt-4" *ngIf="$user|async as user" >
+    <div class="row">
+        <div class="col user-informtn">
+            <img src="../../../assets/img/avatar.png" class="img-fluid w-25">
+            <h3>{{user.firstName}} {{user.lastName}}</h3>
+            <h4>{{user.email}} </h4>
+        </div>
+        <div class="col forms-input">
+            <label>First Name</label>
+            <input type="text" class="form-control" [value]="user.firstName">
+            <label>Last Name</label>
+            <input type="text" class="form-control" [value]="user.lastName">
+            <label>Phone Number</label>
+            <input type="text" class="form-control" [value]="user.phoneNumber">
+            <label>Address</label>
+            <input type="text" class="form-control" [value]="user.address">
+            <label>Zip Code</label>
+            <input type="text" class="form-control" [value]="user.zipCode">
+            <label>Email</label>
+            <input type="text" disabled class="form-control" [value]="user.email">
+            <button class="btn btn-primary w-100" disabled>Update Profile</button>
+        </div>
+        <div class="col forms-input">
+            <label>Password</label>
+            <input type="password" class="form-control" >
+            <label>Confirm Password</label>
+            <input type="password" class="form-control" >
+            <button class="btn btn-primary w-100" disabled>Update Password</button>
+
+            <div class="admin-panel mt-5" *ngIf="user && user.roles && user.roles.includes('Administrator')">
+                <button class="btn btn-success w-100 " routerLink="/admin">Admin Panel</button>
+            </div>
+
+        </div>
+    </div>
+</div>

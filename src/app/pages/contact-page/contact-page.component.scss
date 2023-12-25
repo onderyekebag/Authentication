@@ -1,0 +1,17 @@
+.contact-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+        margin: 2rem;
+        text-decoration: none;
+        p{
+            color: blue;
+            opacity: 0;
+            font-weight: 600;
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

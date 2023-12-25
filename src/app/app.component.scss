@@ -1,0 +1,19 @@
+.navbar{    
+    background-color: #522788;
+    padding: 1.5rem 2rem;
+    h3{
+        color: #fff;
+        
+    }
+    .navbar-links{
+        a{
+            text-decoration: none;
+            color: black;
+            margin-left: 15px;
+            color: #fff;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+}

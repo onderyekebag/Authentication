@@ -1,0 +1,23 @@
+<div class="navbar container">
+    <h3>Auth</h3>
+    <div class="navbar-links">
+        <a routerLink="/">Home</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/contact">Contact</a>
+    </div>
+
+    <div>
+        <div class="login-false" *ngIf="!($isUserLogin|async)">
+            <button class="btn btn-primary" routerLink="/login">Login</button>
+        </div>
+        <div class="login-true" *ngIf="$isUserLogin|async as userLogin">
+            <button class="btn btn-primary mx-2" routerLink="/profile">Profile</button>
+            <button class="btn btn-danger" (click)="logout()">Logout</button>
+        </div>
+        
+    </div>
+
+</div>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

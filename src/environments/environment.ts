@@ -1,4 +1,4 @@
 export const environment = {
    // production:true,
-    apiUrl:'https://carrental-v3-backend.herokuapp.com'
+    apiUrl:'https://my-api-url'
 };
